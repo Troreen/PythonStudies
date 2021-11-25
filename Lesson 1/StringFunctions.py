@@ -10,5 +10,3 @@ print(name.upper())
 print(name.title())
 print("2. " + name + last_name)
 print(sentence)
-
-print(0.3 - 0.2)
