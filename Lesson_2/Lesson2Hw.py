@@ -1,4 +1,4 @@
-
+'''
 # Exercise 1
 for i in range(2, 10):
     print(i+1)
@@ -37,3 +37,22 @@ for i in range(6):
         print(j, "", end="")
     print("\r")
 
+# Exercise 8
+list = [1, 2, 3, 4, 5]
+for i in reversed(list):
+    print(i)
+
+# Exercise 9
+for i in range(-10, 0):
+    print(i)
+
+# Exercise 10
+fav_bands = ["Leyla the Band", "Duman", "Milky chance", "YYK", "Mor ve Otesi"]
+for i in range(fav_bands):
+    print(i)
+
+# Exercise 11
+start = int(input("Give start: "))
+limit = int(input("Give limit: "))
+for i in range(start, limit):
+ '''   
