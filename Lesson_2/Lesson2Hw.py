@@ -1,5 +1,5 @@
-'''
-# Exercise 1
+
+    # Exercise 1
 for i in range(2, 10):
     print(i+1)
 
@@ -11,14 +11,14 @@ for i in range(6):
 
 # Exercise 3
 nums = [1]
-limit = int(input("What number do you want to go up until?"))
+limit = int(input("What number do you want to go up until?: "))
 for i in range(limit+1):
     nums.append(i)
 total = sum(nums)
 print(total)
 
 # Exercise 4
-num = int(input("Give a number"))
+num = int(input("Give a number: "))
 for i in range(11):
     print(num, "x", i, "=", i * num)
 
@@ -52,7 +52,33 @@ for i in range(fav_bands):
     print(i)
 
 # Exercise 11
-start = int(input("Give start: "))
-limit = int(input("Give limit: "))
-for i in range(start, limit):
- '''   
+n = int(input("Give limit: "))
+for num in range (2, n + 1):
+    if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           print(num)
+
+# Exercise 12
+n1 = 0
+n2 = 1
+for i in range(11)
+    print(n1)
+    n3 = n1 + n2
+    n1 = n2
+    n2 = n3
+
+# Exercise 13
+n = int(input("What number do you want to find the factorial of?: "))
+sum = 1
+for i in range(1, n + 1):
+    sum = sum * i
+print("!" + str(n), "=", sum)
+'''
+# Exercise 14
+n = int(input("Give number: "))
+n_rev = 
+print(n_rev)
+'''
