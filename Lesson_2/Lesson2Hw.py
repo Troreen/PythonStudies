@@ -1,13 +1,13 @@
-
+'''
     # Exercise 1
 for i in range(2, 10):
     print(i+1)
 
-# Exercise 2
+# Exercise 2 
 for i in range(6):
     for j in range(1, i+1):
         print(j, "", end="")
-    print("\r")
+    print("")
 
 # Exercise 3
 nums = [1]
@@ -64,7 +64,7 @@ for num in range (2, n + 1):
 # Exercise 12
 n1 = 0
 n2 = 1
-for i in range(11):
+for i in range(11): 
     print(n1)
     n3 = n1 + n2
     n1 = n2
@@ -76,9 +76,41 @@ sum = 1
 for i in range(1, n + 1):
     sum = sum * i
 print("!" + str(n), "=", sum)
-'''
+
 # Exercise 14
 n = int(input("Give number: "))
-n_rev = 
-print(n_rev)
+reverse = 0
+while n > 0:
+    reminder = n % 10
+    reverse = reverse * 10 + reminder
+    n //= 10
+print(reverse)
+
+# Exercise 15
+list = [0, 1, 2, 3, 4, 5]
+for i in list[1::2]:
+    print(i)
+
+# Exercise 16
+num = int(input("Give limit: "))
+for i in range(num+1):
+    print(i,"^ 3 =", i**3)
+
+# Exercise 17
+n = int(input("Up to how many terms?: "))
+t = "2"
+sum = 0
+for i in range(1, n+1):
+    sum = sum + int(t*i)
+print(sum)
+
+# Exercise 18
+for i in range(6):
+    for j in range(1, i+1):
+        print("* ", end="")
+    print("")
+for i in range(4, 0, -1):
+    for j in range(1, i+1):
+        print("* ", end="")
+    print("")
 '''
