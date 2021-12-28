@@ -1,4 +1,3 @@
-'''
 # Q1
 # plus# Topic: List Comprehensions
 # Write out the following code without using a list comprehension:
@@ -99,7 +98,7 @@ for char in chars:
 t = "GATGGAACTTGACTACGTAAATT"
 u = t.replace("T", "U")
 print(u)
-'''
+
 # Q8
 # Topic: String Manipulation
 # In DNA strings, symbols 'A' and 'T' are complements of each other,
@@ -135,8 +134,8 @@ print(sc)
 # - Maintain this program until you get to the section on Python's Dictionaries.
 important_words = ["list", "function", "string", "integer", "float", "index", "loop", "range"]
 definitions = ["A variable containing multiple items.", "It performs specific tasks that are easy to manipulate.", "Characters that aren't functioning as integers.", "A number.", "A decimal.", "Every character has its own place that is numbered as an index, starting at 0 going up.", "To make something run over and over again.", "Run within a range, using minimum, maximum and the size of the steps between."]
-#for i in range(len(important_words)):
- #   print(important_words[i].title(), "=", definitions[i])
+for i in range(len(important_words)):
+    print(important_words[i].title(), "=", definitions[i])
 
 # Q10
 # Topic: Functions
