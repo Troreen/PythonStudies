@@ -223,15 +223,23 @@ fibonacci()'''
 # 66
 numbers_txt = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "ninteen", "twenty", "thirty", "forty"]
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40]
-def multiply_string():
-    string1 = input("Write first number here: ")
-    string2 = input("Write second number here: ")
-    if " " in string1:
+def multiply_string(string1, string2):
+    if string1 or string2 == "":
+        return None
+    elif " " in string1:
         string1 = string1.split(" ")
-        num1 = numbers[numbers_txt[string1[0].index]] + numbers[numbers_txt[string1[0].index]]
-
+        num1 = numbers[numbers_txt.index(string1[0])] + numbers[numbers_txt.index(string1[1])]
+    elif " " not in string1:
+        num1 = numbers[numbers_txt.index(string1)]
+    elif " " in string2:
+        string2 = string2.split(" ")
+        num2 = numbers[numbers_txt.index(string2[0])] + numbers[numbers_txt.index(string2[1])]
+    else:
+        num2 = numbers[numbers_txt.index(string2)]
+    return(num1*num2)
         
-multiply_string()
+print(multiply_string("twenty two","three"))
+print(multiply_string("","ten"))
 
 # -----------------------------------------------------------------------------
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
