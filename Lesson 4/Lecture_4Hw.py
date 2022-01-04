@@ -1,4 +1,3 @@
-'''
 # Q1
 # Topic: If-Else / For-Loop
 # Points: 5
@@ -110,6 +109,15 @@ print(f"The largest number is: {numbers[0]}")
 # numbers = [1, 2, 3, 4, 5]
 # Sample Output:
 # ['one', 'two', 'three', 'four', 'five']
+digits_txt = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+def converter(list):
+    new_ls = []
+    for item in list:
+        new_ls.append(digits_txt[digits.index(item)])
+    print(new_ls)
+numbers = [1,4,2,t5]
+converter(numbers)
 # -----------------------------------------------------------------------------
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Q7
@@ -123,6 +131,11 @@ print(f"The largest number is: {numbers[0]}")
 # string = "racecar"
 # Sample Output:
 # True
+def palindrome(string):
+    if string == string[::-1]: return True
+    else: return False
+print(palindrome("racecar"))
+print(palindrome("nah"))
 # -----------------------------------------------------------------------------
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Q8
@@ -149,30 +162,32 @@ print(f"The largest number is: {numbers[0]}")
 # x wash car
 # - buy groceries
 # - go to the gym
-def add_item(list):
+def add_item(list, list_done):
     item = input("Enter item you want to add: ")
-    list.append(f" - {item}")
+    list.append(item)
 
-def remove_item(list):
+def remove_item(list, list_done):
     item = input("Enter item you want to remove: ")
-    list.remove(f" - {item[2::]}")
+    list.remove(item)
+    if item in list_done:
+        list_done.remove(item)
 
-def mark_completed(list):
+def mark_completed(list, list_done):
     item = input("Enter item you want to mark completed: ")
-    counter = 1
-    for items in list:
-        if items != item:
-            counter += 1
-        else: return
-    list[counter - 1] = f" x {item}"
+    list_done.append(item)
 
 def print_list(list):
     for item in list:
-        print(item)
-todo_list = [' - wash car', ' - buy groceries', ' - pay bills']
-add_item(todo_list)
-remove_item(todo_list)
-mark_completed(todo_list)
+        if item in done_list:
+            print(f"x {item}")
+        else:
+            print(f"- {item}")
+
+done_list = []
+todo_list = ['wash car', 'buy groceries', 'pay bills']
+add_item(todo_list, done_list)
+remove_item(todo_list, done_list)
+mark_completed(todo_list, done_list)
 print_list(todo_list)
 
 # -----------------------------------------------------------------------------
@@ -204,7 +219,8 @@ def fibonacci():
             n1 = n2
             n2 = n3
         print(n2)
-fibonacci()'''
+fibonacci()
+
 # -----------------------------------------------------------------------------
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Q10
@@ -224,17 +240,17 @@ fibonacci()'''
 numbers_txt = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "ninteen", "twenty", "thirty", "forty"]
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40]
 def multiply_string(string1, string2):
-    if string1 or string2 == "":
+    if not string1 or not string2:
         return None
     elif " " in string1:
         string1 = string1.split(" ")
         num1 = numbers[numbers_txt.index(string1[0])] + numbers[numbers_txt.index(string1[1])]
     elif " " not in string1:
         num1 = numbers[numbers_txt.index(string1)]
-    elif " " in string2:
+    if " " in string2:
         string2 = string2.split(" ")
         num2 = numbers[numbers_txt.index(string2[0])] + numbers[numbers_txt.index(string2[1])]
-    else:
+    elif " " not in string2:
         num2 = numbers[numbers_txt.index(string2)]
     return(num1*num2)
         
