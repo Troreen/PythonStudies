@@ -112,10 +112,9 @@ print(f"The largest number is: {numbers[0]}")
 digits_txt = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 def converter(list):
-    new_ls = []
-    for item in list:
-        new_ls.append(digits_txt[digits.index(item)])
+    new_ls = [digits_txt[digits.index(item)] for item in list]
     print(new_ls)
+
 numbers = [1,4,2,5]
 converter(numbers)
 # -----------------------------------------------------------------------------
