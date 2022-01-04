@@ -116,7 +116,7 @@ def converter(list):
     for item in list:
         new_ls.append(digits_txt[digits.index(item)])
     print(new_ls)
-numbers = [1,4,2,t5]
+numbers = [1,4,2,5]
 converter(numbers)
 # -----------------------------------------------------------------------------
 # xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -132,7 +132,8 @@ converter(numbers)
 # Sample Output:
 # True
 def palindrome(string):
-    if string == string[::-1]: return True
+    if not string: return None
+    elif string == string[::-1]: return True
     else: return False
 print(palindrome("racecar"))
 print(palindrome("nah"))
